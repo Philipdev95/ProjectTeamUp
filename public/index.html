@@ -4,41 +4,99 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css"/>
 
-    <!-- update the version number as needed -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-social.css"/>
+    <!-- update the version number as needed -
     <script defer src="/__/firebase/5.3.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
+    <- include only the Firebase features as you need ->
     <script defer src="/__/firebase/5.3.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/5.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/5.3.1/firebase-messaging.js"></script>
     <script defer src="/__/firebase/5.3.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+     initialize the SDK after all desired features are loaded
+    <script defer src="/__/firebase/init.js"></script> -->
   </head>
-  <body>
+  <body class="bg-darker">
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-darker p-4 text-center">
+          <a href="#" class="col"><h5 class="text-white h4">Projects</h5></a>
+          <a href="#" class="col"><h5 class="text-white h4">Your page</h5></a>
+          <a href="#" class="col"><h5 class="text-white h4">Messages</h5></a>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-darker">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    <div class="container-fluid">
 
-    <h1 id="hotDogOutput">🔥Hot dog status:</h1>
-    <input type="textfield" id="latestHotDogStatus"/>
-    <button id="saveButton">Save</button>
-
-
-
-    <script>
+      <div class="row p-2">
+        <div class="col-sm col-md-8 offset-md-2 bg-yellow rounded p-3">
+          <h1 class="text-center">Project TeamUp</h1>
+          <p>This is the place where <span class="focus1">people with project ideas</span> <span class="focus">meet</span> <span class="focus1">people with the necessary knowledge</span>.</p>
+        </div>
+      </div>
+      <div class="row p-2">
+        <div class="col-sm col-md-4 offset-md-4 bg-yellow p-3 rounded">
+          <h3 class="text-center">Login</h3>
+          <a class="btn btn-block btn-social btn-google text-light">Sign in with Google</a>
+          <a class="btn btn-block btn-social btn-facebook text-light">Sign in with Facebook</a>
+          <a class="btn btn-block btn-social btn-github text-light">Sign in with Github</a>
+        </div>
+      </div>
+      <div class="row p-2">
+        <div class="col-sm col-md-4 offset-md-4 bg-yellow p-3 rounded">
+          <h3 class="text-center">User</h3>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+              <img height="30px" src="img/placeholder.svg" class="rounded-circle float-left mr-2" alt="...">
+              Cras Justodio</a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <img height="30px" src="img/placeholder.svg" class="rounded-circle float-left mr-2" alt="...">
+              Dapibus Acef</a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <img height="30px" src="img/placeholder.svg" class="rounded-circle float-left mr-2" alt="...">
+              Morbi Leorisus</a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <img height="30px" src="img/placeholder.svg" class="rounded-circle float-left mr-2" alt="...">
+              Porta Consectetur</a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <img height="30px" src="img/placeholder.svg" class="rounded-circle float-left mr-2" alt="...">
+              Vestibulum Ateros</a>
+          </div>
+        </div>
+      </div>
+      <div class="row p-2">
+        <div class="col-sm col-md-8 offset-md-2 bg-yellow p-3 rounded">
+          <h3 class="text-center">Projects</h3>
+          <div class="card text-center col-12 col-md-4">
+            <div class="card-header">
+              Started by Idea Maker
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Name of project</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Visit Project</a>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--script>
       document.addEventListener('DOMContentLoaded', function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
@@ -53,12 +111,13 @@
         try {
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+          //document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
         } catch (e) {
           console.error(e);
           document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+
         }
       });
-    </script>
+    </script-->
   </body>
 </html>
